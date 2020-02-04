@@ -1,0 +1,68 @@
+# TYPE SISTEM
+# Int, Float, String, Boolean, ID
+# 
+
+type Clientes {
+ci: String
+
+
+}
+type Producto {
+
+    }
+
+# Definir Schema
+
+# Queries
+type Query {
+    
+    pizzas (name: String) : [Pizza]
+     pizzaId (id:Int): Pizza
+     ingredientesId (id:Int) : [Ingredient]
+    # pizzaIds (id:Int): Pizza
+}
+#Mutaciones
+
+type Mutation {
+    createCliente (cliente: inputCliente): Clientes
+    deleteCliente (ci: String) Clientes;
+
+}
+type Pizza {
+    
+}
+
+#     id: Int!
+#     name: String!
+#     origin: String
+#     ingredients: [Ingredient]
+# }
+# type Ingredient {  
+
+#     id: Int!
+#     name: String!
+#     calories: String
+
+# }
+
+# input PizzaInput{
+#    # id : Int! es atributo serial......... 
+#     name: String!
+#     origin: String
+#     ingredientIds: [Int] # solo necesito el id de ingredientes
+# }
+
+# input PizzaUpdate {
+#     id: Int!
+#     name: String!
+#      origin: String
+#     ingredientIds: [Int] # solo necesito el id de ingredientes
+
+# }
+# input PizzaDelete {
+#     id: Int!
+#     # name: String!
+#     #  origin: String
+#     # ingredientIds: [Int] # solo necesito el id de ingredientes
+
+# }
